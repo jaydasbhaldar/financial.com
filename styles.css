@@ -1,0 +1,97 @@
+.container1 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://images.pexels.com/photos/7567440/pexels-photo-7567440.jpeg?auto=compress&cs=tinysrgb&') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 10px;
+    color: red;
+}
+
+.glass-form {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px  rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 0px solid rgba(255, 255, 255, 0.3);
+    padding: 35px;
+    width: 300px;
+    text-align: center;
+    
+}
+
+.glass-form h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.glass-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    text-align: left;
+}
+
+.glass-form input,
+.glass-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+}
+
+.glass-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.glass-form button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+
+
+
+    /* styles.css */
+.pricing-body {
+    width: 200px;  /* Set a width for the container */
+    height: 200px;
+    overflow: hidden;  /* Hide overflow to maintain container dimensions */
+}
+
+.pricing-table {
+    width: 100%;  /* Ensure image takes up full container width */
+    transition: transform 0.7s ease;  /* Smooth transition for the zoom effect */
+}
+
+.pricing-table:hover {
+    transform: scale(0.8);  /* Scale image up on hover */
+}
+
+.div2{
+
+    font-weight: bold;
+}

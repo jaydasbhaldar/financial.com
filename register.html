@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyMinds Register page</title>
+    <link rel="stylesheet" href="stylesss.css">
+
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../assets/css/maicons.css">
+  
+    <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
+  
+    <link rel="stylesheet" href="../assets/vendor/owl-carousel/css/owl.carousel.min.css">
+  
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+  
+    <link rel="stylesheet" href="../assets/css/mobster.css">
+  
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+  <script>
+
+ function validateRegister(){
+
+var name = document.forms["myform"]["name"].value
+
+var email = document.forms["myform"]["email"].value
+
+var password = document.forms["myform"]["password"].value
+
+
+if(name == ""){
+
+  alert("Name must be filled out")
+
+  return false;
+}
+
+if (email == ""){
+
+  alert("email must be Filled out")
+
+  return false;
+}
+
+
+if(password.length < 6){
+
+  alert ("password must be at least 6 characters long")
+
+}
+return false;
+
+
+localStorage.setItem("name",name)
+
+localStorage.setItem("email",email)
+
+localStorage.setItem("password",password)
+
+window.location.href = "login.html"
+ }
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+  <nav class="navbar navbar-expand-lg navbar-light navbar-floating">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="" alt="" width="80" style="mix-blend-mode:multiply;">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav ml-lg-5 mt-3 mt-lg-0">
+          <li class="nav-item  active">
+            <a class="nav-link -toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item active" href="index.html"></a>
+              
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">login</a>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+    
+
+    <div class="container3" style=" margin-top: 100px; ">
+        <form class="myform" onsubmit=" return validateRegister()">
+
+          <div class = "glass-form">
+
+            <h2>Register</h2>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" style="color: red;">Register</button>
+          </div>
+        </form>
+    </div>
+</body>
+</html>

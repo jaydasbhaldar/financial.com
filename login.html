@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyMinds Login Page</title>
+    <link rel="stylesheet" href="styless.css">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../assets/css/maicons.css">
+  
+    <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
+  
+    <link rel="stylesheet" href="../assets/vendor/owl-carousel/css/owl.carousel.min.css">
+  
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+  
+    <link rel="stylesheet" href="../assets/css/mobster.css">
+  
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+<script>
+
+function validateLogin(){
+
+var usermane = document.forms["myform"]["username"].value
+
+var password = document.forms["myform"]["password"].value
+
+  if (username == ""){
+
+    alert("Name must be Filled Out")
+
+    return false;
+  }
+
+  if(password.length < 6 ){
+
+    alert("Password must be at least 6 Characters long")
+
+    return false;
+  }
+
+ localStorage.setItem("username",username)
+
+ localStorage.setItem("password",password)
+
+ window.location.href = "index.html"
+
+ return false ;
+
+}
+</script>
+
+<script>
+var usernamee = localStorage.getItem("usernamee")
+
+var email = localStorage.getItem("email")
+
+var password = localStorage.getItem("password")
+
+console.log(usernamee,email,password);
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar-floating">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="" alt="" width="80" style="mix-blend-mode:multiply;">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-lg-5 mt-3 mt-lg-0">
+              <li class="nav-item  active">
+                <a class="nav-link -toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item active" href="index.html"></a>
+                  
+                </div>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="register.html">register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">login</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+
+
+
+
+
+    <div class="container2">
+        <div class="login-form" >
+            <h2>Login</h2>
+            <form name="myform" onsubmit=" return validateLogin()">
+                <div class="input-group" >
+                    <input type="text" id="username" name="username" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <button type="submit" style="color: red;">Login</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>
